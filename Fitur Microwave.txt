@@ -1,0 +1,21 @@
+- Pengaturan Waktu
+- Kelembapan (%)
+- Pengaturan suhu (C)
+- Pengunci Keamanan Anak (Child Lock)
+- Mode
+	- Pemanasan cepat (quick heat)
+	- Pencairan otomatis (Deforst)
+	- Panggang (grill)
+- Pengaturan Preset
+	- Sayur
+	- Seafood
+- Fitur Pembersihan Diri (Cleaning)
+- Notifikasi dan Pengingat
+	- Done
+	- Overheat
+	- Kering 
+ALGORITMA
+- PID Controller
+- Adaptive Control
+- Clustering Algorithms (seperti K-Means)
+- State Machines
