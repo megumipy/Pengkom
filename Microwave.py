@@ -97,143 +97,143 @@ class Microwave(comp):
     def __init__(self, time, temp, moisture):
         super().__init__(time, temp, moisture)
     def display1():
-        b = 2
+        side_h = 2
         print("="*(22))
-        while b>=0:
-            a = 20
-            while a>0:
-                if b == 2:
-                    if a == 20 or a == 2:
+        while side_h>=0:
+            side_v = 20
+            while side_v>0:
+                if side_h == 2:
+                    if side_v == 20 or side_v == 2:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print(' ')
-                    elif a == 19:
+                    elif side_v == 19:
                         print("Smart",end='')
-                    elif a<16:
+                    elif side_v<16:
                         print(' ', end='')
-                elif b == 1:
-                    if a == 20 or a == 2:
+                elif side_h == 1:
+                    if side_v == 20 or side_v == 2:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print(' ')
-                    elif a == 19:
+                    elif side_v == 19:
                         print("Microwave",end='')
-                    elif a<12:
+                    elif side_v<12:
                         print(' ', end='')
-                elif b == 0:
-                    if a == 20:
+                elif side_h == 0:
+                    if side_v == 20:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print("||")
                     else:
                         print(' ', end='')  
-                a-=1
-            b-=1
+                side_v-=1
+            side_h-=1
         print("="*(22))
     def display2(self):
-        b = 2
+        side_h = 2
         print("="*(22))
-        while b>=0:
-            a = 20
-            while a>0:
-                if b == 2:
+        while side_h>=0:
+            side_v = 20
+            while side_v>0:
+                if side_h == 2:
                     if self.temp<10:
-                        c = 12
+                        space = 12
                     elif self.temp <100:
-                        c = 11
+                        space = 11
                     else:
-                        c = 10
+                        space = 10
                         
-                    if a == 20 or a == 2:
+                    if side_v == 20 or side_v == 2:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print(' ')
-                    elif a == 19:
+                    elif side_v == 19:
                         print(f'Suhu: {self.temp}°C', end='')
-                    elif a<c:
+                    elif side_v<space:
                         print(' ', end='')
-                elif b == 1:
+                elif side_h == 1:
                     if self.moisture<10:
-                        c = 7
+                        space = 7
                     elif self.moisture <100:
-                        c = 6
+                        space = 6
                     else:
-                        c = 5
+                        space = 5
                         
-                    if a == 20 or a == 2:
+                    if side_v == 20 or side_v == 2:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print(' ')
-                    elif a == 19:
+                    elif side_v == 19:
                         print(f'Kelembapan: {int(round(self.moisture, 0))}%', end='')
-                    elif a<c:
+                    elif side_v<space:
                         print(' ', end='') 
-                elif b == 0:
+                elif side_h == 0:
                     if self.time<600:
-                        c = 5
+                        space = 5
                     else:
-                        c = 4
+                        space = 4
                         
-                    if a == 20 or a == 2:
+                    if side_v == 20 or side_v == 2:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print(' ')
-                    elif a == 19:
+                    elif side_v == 19:
                         print(f'Sisa Waktu: {int((self.time/60))}:00', end='')
-                    elif a<c:
+                    elif side_v<space:
                         print(' ', end='')   
-                a-=1
-            b-=1
+                side_v-=1
+            side_h-=1
         print("="*(22))
     def displayover():
-        b = 2
+        side_h = 2
         print("="*(22))
-        while b>=0:
-            a = 20
-            while a>0:
-                if b == 1:
-                    if a == 20 or a == 2:
+        while side_h>=0:
+            side_v = 20
+            while side_v>0:
+                if side_h == 1:
+                    if side_v == 20 or side_v == 2:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print(' ')
-                    elif a == 14:
+                    elif side_v == 14:
                         print("Overheat",end='')
-                    elif (a<20 and a>14) or a<8:
+                    elif (side_v<20 and side_v>14) or side_v<8:
                         print(' ', end='')
                 else:
-                    if a == 20:
+                    if side_v == 20:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print("||")
                     else:
                         print(' ', end='')  
-                a-=1
-            b-=1
+                side_v-=1
+            side_h-=1
         print("="*(22))
     def displaydry():
-        b = 2
+        side_h = 2
         print("="*(22))
-        while b>=0:
-            a = 20
-            while a>0:
-                if b == 1:
-                    if a == 20 or a == 2:
+        while side_h>=0:
+            side_v = 20
+            while side_v>0:
+                if side_h == 1:
+                    if side_v == 20 or side_v == 2:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print(' ')
-                    elif a == 15:
+                    elif side_v == 15:
                         print("Kering Wak",end='')
-                    elif (a<20 and a>15) or a<7:
+                    elif (side_v<20 and side_v>15) or side_v<7:
                         print(' ', end='')
                 else:
-                    if a == 20:
+                    if side_v == 20:
                         print("||", end='')
-                    elif a == 1:
+                    elif side_v == 1:
                         print("||")
                     else:
                         print(' ', end='')  
-                a-=1
-            b-=1
+                side_v-=1
+            side_h-=1
         print("="*(22))
     def menu():
         print(" 1. Start")
@@ -331,6 +331,3 @@ class Microwave(comp):
                 break
 
 Microwave.Start()       
-        
-        
-    
